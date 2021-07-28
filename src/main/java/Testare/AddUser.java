@@ -18,7 +18,7 @@ public class AddUser {
     private WebElement passwordElement;
     @FindBy(tagName = "button")
     private WebElement loginButtonElement;
-    @FindBy(xpath = "(/html/body/app-root/app-users/app-header/mat-toolbar/button[2]/span[1]/span")
+    @FindBy(xpath = "/html/body/app-root/app-users/app-header/mat-toolbar/button[2]/span[1]/span")
     private WebElement AddUserElement;
     @FindBy(id = "mat-input-0")
     private WebElement UsernameAddElement;

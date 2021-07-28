@@ -10,7 +10,7 @@ import org.testng.annotations.Test;
 
 public class EditTest {
 
-    String baseUrl = "http://localhost:4200/edit/85";
+    String baseUrl = "http://localhost:4200/edit/2";
     public WebDriver driver;
     public LoginPage loginPage;
     public AddUser addUser;
@@ -40,7 +40,6 @@ public class EditTest {
         editUser.getUsernameAddElement().sendKeys("Afdsfsd");
         editUser.getSubmitEditElement().click();
         Assert.assertTrue(driver.findElement(By.xpath("/html/body/app-root/app-users/app-user-card[1]")).isDisplayed());
-
     }
 
     @Test(priority = 2)

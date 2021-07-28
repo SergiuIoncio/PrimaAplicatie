@@ -54,16 +54,16 @@ public class AddUserTest2 {
         driver.get(baseUrl);
         addUser.getUsernameAddElement().sendKeys("vasile");
         addUser.getEmailElement().sendKeys("mss@sa");
-        addUser.getFullNameElement().sendKeys("dff vcx vbvxv");
+        addUser.getFullNameElement().sendKeys("Finlay Burks");
         addUser.getPasswordAddElement().sendKeys("saaq11s34");
         addUser.getFemaleElement().click();
         addUser.getSubmitElement().click();
-        Assert.assertEquals(driver.getPageSource().contains("dff vcx vbvxv"),true);
+        Assert.assertEquals(driver.getPageSource().contains("Finlay Burks"),true);
     }
     @Test(priority = 3 )
     public void DuplicateUsername(){
         driver.get(baseUrl);
-        addUser.getUsernameAddElement().sendKeys("wasile");
+        addUser.getUsernameAddElement().sendKeys("User1");
         addUser.getEmailElement().sendKeys("ssergsiu@sc5555ssx.sssscom");
         addUser.getFullNameElement().sendKeys("Serrfsds2255ssa5d");
         addUser.getPasswordAddElement().sendKeys("sss1s2555qqws433ss34");
@@ -76,7 +76,7 @@ public class AddUserTest2 {
     public void DuplicateEmail(){
         driver.get(baseUrl);
         addUser.getUsernameAddElement().sendKeys("Sergiu233");
-        addUser.getEmailElement().sendKeys("sszzz@ss");
+        addUser.getEmailElement().sendKeys("my_email1@gmail.com");
         addUser.getFullNameElement().sendKeys("Serrfsd555sd");
         addUser.getPasswordAddElement().sendKeys("sss1s2345ss34");
         addUser.getFemaleElement().click();
@@ -90,7 +90,7 @@ public class AddUserTest2 {
         addUser.getUsernameAddElement().sendKeys("Sergiu111");
         addUser.getEmailElement().sendKeys("my_email0@gmai222sssx");
         addUser.getFullNameElement().sendKeys("Erika Emerso22ssn");
-        addUser.getPasswordAddElement().sendKeys("lll11");
+        addUser.getPasswordAddElement().sendKeys("my_pass1");
         addUser.getFemaleElement().click();
         addUser.getSubmitElement().click();
         Assert.assertTrue(driver.findElement(By.xpath("/html/body/app-root/app-addmodal/div/div/form/button/span[1]")).isSelected());
